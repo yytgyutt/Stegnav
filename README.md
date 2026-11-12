@@ -19,14 +19,6 @@
 - **事件化记忆**：保存“为什么选择、执行结果、是否验证”，而不只是保存最终坐标。
 - **验证后回写**：探索确认的新实例可以提升为长期记忆，并回写 HomeGraph。
 
-## 它和现有 HomeGraph 的关系
-
-HomeGraph 继续承担**长期、稳定、可编辑的世界模型**；本仓库在它上方增加一个面向当前任务的动态层：
-
-![Limitations of state-centric scene graphs from the paper](docs/assets/paper/figure-1-limitations.png)
-
-*Figure 1 from the paper: a fixed state-centric graph can suffer from instance ambiguity, semantic-spatial separation, forgotten history and repeated exploration.*
-
 ## 论文中的运行示例
 
 ![Language-guided navigation example from the paper](docs/assets/paper/figure-4-language-navigation.png)
@@ -37,13 +29,7 @@ HomeGraph 继续承担**长期、稳定、可编辑的世界模型**；本仓库
 
 *Figure 5 from the paper: the agent incrementally explores unknown regions and finds the piano.*
 
-## 论文报告的失败数变化
-
-![Failure analysis from the paper](docs/assets/paper/figure-3-failures.png)
-
-*Figure 3 from the paper: compared with the controlled 3D scene-graph baseline, STEGNav reduces failures in inefficient exploration, memory recall, target grounding and instance confusion.*
-
-> Figures 1–5 are reproduced from the cited arXiv paper for scholarly commentary and method explanation. Copyright remains with the paper authors; they are not covered by this repository's MIT license.
+> Figures 2, 4 and 5 are reproduced from the cited arXiv paper for scholarly commentary and method explanation. Copyright remains with the paper authors; they are not covered by this repository's MIT license.
 
 ## 当前实现
 
@@ -73,32 +59,6 @@ stegnav-demo
 ```bash
 PYTHONPATH=src python3 -m stegnav_reproduction.demo
 ```
-
-## 接入你的 HomeGraph
-
-```python
-import json
-
-from stegnav_reproduction.homegraph_adapter import HomeGraphAdapter
-
-with open("homegraph.json", "r", encoding="utf-8") as handle:
-    document = json.load(handle)
-
-adapter = HomeGraphAdapter(document)
-scene_nodes = adapter.scene_nodes()
-
-# 探索并验证新实例后：
-adapter.upsert_verified_object(
-    node_id="lamp_new_01",
-    label="floor_lamp",
-    room_id="living_room",
-    x=3.2,
-    y=1.8,
-    confidence=0.91,
-)
-```
-
-不同 HomeGraph 版本字段可能不同，适配器会尽量保留原字段；正式接入前仍应使用你项目自身的 Schema 校验器。
 
 ## 下一步
 
