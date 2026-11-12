@@ -1,6 +1,8 @@
 # STEGNav × HomeGraph Reproduction
 
-![STEGNav × HomeGraph banner](docs/assets/banner.svg)
+![STEGNav method overview from the paper](docs/assets/paper/figure-2-overview.png)
+
+*Figure 2 from the STEGNav paper: query-conditioned instances and frontiers form the spatial axis, while short- and long-term event memory form the temporal axis.*
 
 > **Unofficial, paper-inspired reproduction.** This repository is not the
 > official STEGNav implementation and is not affiliated with the paper's
@@ -21,9 +23,27 @@
 
 HomeGraph 继续承担**长期、稳定、可编辑的世界模型**；本仓库在它上方增加一个面向当前任务的动态层：
 
-![HomeGraph and task-conditioned graph comparison](docs/assets/comparison.svg)
+![Limitations of state-centric scene graphs from the paper](docs/assets/paper/figure-1-limitations.png)
 
-![Closed-loop architecture](docs/assets/architecture.svg)
+*Figure 1 from the paper: a fixed state-centric graph can suffer from instance ambiguity, semantic-spatial separation, forgotten history and repeated exploration.*
+
+## 论文中的运行示例
+
+![Language-guided navigation example from the paper](docs/assets/paper/figure-4-language-navigation.png)
+
+*Figure 4 from the paper: the agent explores frontiers and grounds “refrigerator next to the kitchen cabinet” in four navigation steps.*
+
+![Object navigation example from the paper](docs/assets/paper/figure-5-object-navigation.png)
+
+*Figure 5 from the paper: the agent incrementally explores unknown regions and finds the piano.*
+
+## 论文报告的失败数变化
+
+![Failure analysis from the paper](docs/assets/paper/figure-3-failures.png)
+
+*Figure 3 from the paper: compared with the controlled 3D scene-graph baseline, STEGNav reduces failures in inefficient exploration, memory recall, target grounding and instance confusion.*
+
+> Figures 1–5 are reproduced from the cited arXiv paper for scholarly commentary and method explanation. Copyright remains with the paper authors; they are not covered by this repository's MIT license.
 
 ## 当前实现
 
