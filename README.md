@@ -19,17 +19,7 @@
 - **事件化记忆**：保存“为什么选择、执行结果、是否验证”，而不只是保存最终坐标。
 - **验证后回写**：探索确认的新实例可以提升为长期记忆，并回写 HomeGraph。
 
-## 论文中的运行示例
-
-![Language-guided navigation example from the paper](docs/assets/paper/figure-4-language-navigation.png)
-
-*Figure 4 from the paper: the agent explores frontiers and grounds “refrigerator next to the kitchen cabinet” in four navigation steps.*
-
-![Object navigation example from the paper](docs/assets/paper/figure-5-object-navigation.png)
-
-*Figure 5 from the paper: the agent incrementally explores unknown regions and finds the piano.*
-
-> Figures 2, 4 and 5 are reproduced from the cited arXiv paper for scholarly commentary and method explanation. Copyright remains with the paper authors; they are not covered by this repository's MIT license.
+> Figure 2 is reproduced from the cited arXiv paper for scholarly commentary and method explanation. Copyright remains with the paper authors; it is not covered by this repository's MIT license.
 
 ## 当前实现
 
