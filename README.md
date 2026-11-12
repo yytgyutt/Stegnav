@@ -1,5 +1,7 @@
 # STEGNav × HomeGraph Reproduction
 
+![STEGNav × HomeGraph banner](docs/assets/banner.svg)
+
 > **Unofficial, paper-inspired reproduction.** This repository is not the
 > official STEGNav implementation and is not affiliated with the paper's
 > authors. It provides a transparent engineering scaffold based on the ideas
@@ -19,17 +21,9 @@
 
 HomeGraph 继续承担**长期、稳定、可编辑的世界模型**；本仓库在它上方增加一个面向当前任务的动态层：
 
-```text
-自然语言任务
-    ↓
-查询落图：筛选相关对象/房间
-    ↓
-已知目标候选 + 未知区域 frontier
-    ↓
-策略选择 → 导航/观测 → 结果验证
-    ↓
-短期事件记忆 → 验证通过 → 回写 HomeGraph
-```
+![HomeGraph and task-conditioned graph comparison](docs/assets/comparison.svg)
+
+![Closed-loop architecture](docs/assets/architecture.svg)
 
 ## 当前实现
 
