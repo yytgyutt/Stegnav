@@ -5,6 +5,7 @@
 > authors. It provides a transparent engineering scaffold based on the ideas
 > described in [STEGNav (arXiv:2608.28279)](https://arxiv.org/abs/2608.28279).
 
+[![Tests](https://github.com/yytgyutt/stegnav-homegraph-reproduction/actions/workflows/test.yml/badge.svg)](https://github.com/yytgyutt/stegnav-homegraph-reproduction/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 这个项目把 STEGNav 的论文思路拆成一套可运行、可替换的最小系统，并展示如何在现有 HomeGraph 上增加：
