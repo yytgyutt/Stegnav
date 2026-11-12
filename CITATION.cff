@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the original STEGNav paper when using this reproduction scaffold."
+title: "STEGNav x HomeGraph Reproduction"
+type: software
+version: 0.1.0
+date-released: 2026-11-12
+license: MIT
+authors:
+  - name: "HomeGraph Reproduction Contributors"
+preferred-citation:
+  type: article
+  title: "STEGNav"
+  year: 2026
+  url: "https://arxiv.org/abs/2608.28279"
